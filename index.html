@@ -2,24 +2,22 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/PZhsnMGN/MG-9880-Original.jpg">
-    <link rel="apple-touch-icon" href="https://i.ibb.co/PZhsnMGN/MG-9880-Original.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary SEO -->
-    <title>Videomaker para Profissionais da Saúde em Fortaleza | Fábio Augusto</title>
-    <meta name="description" content="Estratégia audiovisual e marketing para médicos, dentistas e profissionais da saúde em Fortaleza. Aumente sua autoridade com vídeos high-end.">
-    <meta name="keywords" content="videomaker fortaleza, videomaker saúde, produção audiovisual fortaleza, marketing médico fortaleza, filmagem para médicos, estrategista de conteúdo, video marketing fortaleza, videomaker premium, edição de vídeo fortaleza">
+    <title>Videomaker para Médicos em Fortaleza | Vídeos Profissionais para Consultórios</title>
+    <meta name="description" content="Produção de vídeos de alto padrão para médicos e profissionais da saúde em Fortaleza. Conteúdo estratégico para Instagram, YouTube e anúncios, focado em autoridade e agenda cheia.">
     <meta name="author" content="Fábio Augusto">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://fabioaugustovideomaker.com.br/" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
     
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fabioaugustovideomaker.com.br/">
-    <meta property="og:title" content="Videomaker para Profissionais da Saúde em Fortaleza | Fábio Augusto">
-    <meta property="og:description" content="Estratégia audiovisual e marketing para médicos, dentistas e profissionais da saúde em Fortaleza. Aumente sua autoridade com vídeos high-end.">
-    <meta property="og:image" content="https://i.ibb.co/PZhsnMGN/MG-9880-Original.jpg">
+    <meta property="og:title" content="Videomaker para Médicos em Fortaleza | Fábio Augusto">
+    <meta property="og:description" content="Transforme seu conhecimento técnico em autoridade digital. Produção de vídeo especializada em saúde.">
+    <meta property="og:image" content="./assets/img/fabio-augusto-perfil.webp">
     <meta property="og:locale" content="pt_BR">
     
     <!-- Local SEO -->
@@ -33,74 +31,717 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#8A2BE2',
-              dark: '#050505',
-              text: '#f8fafc',
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              grotesk: ['Space Grotesk', 'sans-serif'],
-            },
-            animation: {
-              marquee: 'marquee 20s linear infinite',
-            },
-            keyframes: {
-              marquee: {
-                '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-50%)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-
     <style>
-      body {
-        background-color: #050505;
-        color: #f8fafc;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-      }
-      
-      /* Custom scrollbar */
-      ::-webkit-scrollbar { width: 6px; }
-      ::-webkit-scrollbar-track { background: #050505; }
-      ::-webkit-scrollbar-thumb { background: #333; border-radius: 0px; }
-      ::-webkit-scrollbar-thumb:hover { background: #8A2BE2; }
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --color-primary: #8A2BE2;
+            --color-primary-dark: #7022b8;
+            --color-dark: #050505;
+            --color-dark-surface: #0A0A0A;
+            --color-text: #f8fafc;
+            --color-text-muted: #9ca3af;
+            --color-border: rgba(255, 255, 255, 0.1);
+            
+            --font-sans: 'Inter', sans-serif;
+            --font-grotesk: 'Space Grotesk', sans-serif;
+            
+            --container-width: 1280px;
+            --header-height: 70px;
+        }
 
-      /* Text Effects */
-      .stroke-text {
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-        color: transparent;
-      }
-      .outline-text {
-        text-shadow: 0 0 20px rgba(138,43,226, 0.3);
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      /* Reveal Animation Classes */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 1s ease-out;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      
-      /* Staggered Delays */
-      .delay-100 { transition-delay: 100ms; }
-      .delay-200 { transition-delay: 200ms; }
-      .delay-300 { transition-delay: 300ms; }
-      .delay-400 { transition-delay: 400ms; }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-dark);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--color-dark); }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 0px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4 { font-family: var(--font-grotesk); font-weight: 700; text-transform: uppercase; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+        button { cursor: pointer; border: none; background: none; font-family: inherit; }
+        
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .text-primary { color: var(--color-primary); }
+        .text-muted { color: var(--color-text-muted); }
+        .uppercase { text-transform: uppercase; }
+        .font-mono { font-family: monospace; }
+        .tracking-widest { letter-spacing: 0.1em; }
+        .text-center { text-align: center; }
+        
+        /* Noise Overlay */
+        .noise-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E');
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--header-height);
+            background-color: rgba(5, 5, 5, 0.95);
+            border-bottom: 1px solid var(--color-border);
+            backdrop-filter: blur(8px);
+            z-index: 50;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            height: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: var(--font-grotesk);
+            letter-spacing: -0.05em;
+            border-right: 1px solid var(--color-border);
+            padding-right: 2rem;
+            cursor: pointer;
+        }
+
+        .desktop-menu {
+            display: none;
+            margin-left: auto;
+            align-items: stretch;
+        }
+
+        .nav-link {
+            padding: 0 1.5rem;
+            height: 100%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            border-left: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .btn-cta-nav {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 0 2rem;
+        }
+        .btn-cta-nav:hover { background-color: var(--color-primary-dark); }
+
+        .mobile-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-left: 1rem;
+        }
+
+        .mobile-menu-btn {
+            color: white;
+            padding: 0.5rem;
+            border-left: 1px solid var(--color-border);
+            height: 100%;
+            width: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            width: 100%;
+            height: calc(100vh - var(--header-height));
+            background-color: var(--color-dark);
+            display: none;
+            flex-direction: column;
+            z-index: 40;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .mobile-menu.open { display: flex; }
+
+        .mobile-link {
+            text-align: left;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #d1d5db;
+            transition: all 0.3s;
+        }
+        
+        .mobile-link:hover { padding-left: 2rem; color: white; background: rgba(255,255,255,0.05); }
+
+        @media (min-width: 768px) {
+            .desktop-menu { display: flex; }
+            .mobile-controls { display: none; }
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            padding-top: var(--header-height);
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid var(--color-border);
+            overflow: hidden;
+        }
+
+        .grid-lines {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .grid-lines-inner {
+            width: 100%;
+            max-width: var(--container-width);
+            border-left: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            height: 100%;
+        }
+        .grid-line {
+            position: absolute;
+            top: 0; height: 100%; width: 1px;
+            background-color: rgba(255,255,255,0.05);
+            display: none;
+        }
+        .grid-line:nth-child(1) { left: 25%; }
+        .grid-line:nth-child(2) { left: 50%; }
+        .grid-line:nth-child(3) { left: 75%; }
+
+        @media(min-width: 768px) { .grid-line { display: block; } }
+
+        .hero-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .badge-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .line-accent { width: 3rem; height: 1px; background-color: var(--color-primary); }
+
+        .hero-title {
+            font-size: 10vw;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            word-break: break-word;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #fff, #6b7280);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .outline-text {
+            text-shadow: 0 0 20px rgba(138,43,226, 0.3);
+            color: var(--color-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: #d1d5db;
+            font-weight: 300;
+            line-height: 1.6;
+            border-left: 2px solid var(--color-primary);
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-top: 1px solid var(--color-border);
+            padding-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #9ca3af;
+        }
+        .dot { width: 6px; height: 6px; background-color: var(--color-primary); border-radius: 50%; }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title { font-size: 5.5rem; }
+            .hero-layout {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 2rem;
+            }
+            .hero-desc-col { max-width: 42rem; }
+            .hero-actions { width: auto; }
+            .trust-badges { gap: 2rem; font-size: 0.75rem; }
+        }
+        @media (min-width: 1024px) {
+            .hero-title { font-size: 6.5rem; }
+        }
+
+        /* Buttons */
+        .btn-primary {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            background-color: var(--color-primary);
+            color: white;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(138, 43, 226, 0.2);
+            min-height: 56px;
+        }
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #d1d5db;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            border-color: #fff;
+            color: #fff;
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Marquee */
+        .marquee-container {
+            border-top: 1px solid var(--color-border);
+            background-color: var(--color-dark-surface);
+            padding: 1rem 0;
+            overflow: hidden;
+            position: relative;
+            z-index: 20;
+        }
+        .marquee-content {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee-item {
+            display: flex;
+            align-items: center;
+        }
+        .marquee-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 1rem;
+        }
+        .marquee-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+            color: transparent;
+            opacity: 0.3;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @media (min-width: 768px) { .marquee-text { font-size: 2.25rem; } }
+
+        /* --- ABOUT SECTION --- */
+        .about-layout { display: flex; flex-direction: column; }
+        .about-image-col {
+            width: 100%;
+            border-right: 1px solid var(--color-border);
+            position: relative;
+        }
+        .sticky-wrapper { position: relative; }
+        .about-img-container {
+            position: relative;
+            aspect-ratio: 3/4;
+            background-color: #111;
+            overflow: hidden;
+        }
+        .about-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(125%);
+            transition: filter 0.7s ease;
+        }
+        .about-img-container:hover .about-img { filter: grayscale(0); }
+        
+        .about-content-col { width: 100%; }
+        .about-header { padding: 2rem; border-bottom: 1px solid var(--color-border); }
+        .about-list-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 2rem;
+            transition: background-color 0.3s;
+        }
+        .about-list-item:hover { background-color: rgba(255,255,255,0.05); }
+
+        .about-cta-bar {
+            padding: 2rem;
+            background-color: var(--color-dark-surface);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .about-layout { flex-direction: row; }
+            .about-image-col { width: 41.666%; }
+            .about-content-col { width: 58.333%; }
+            .sticky-wrapper { position: sticky; top: var(--header-height); }
+            .about-img-container { height: calc(100vh - var(--header-height)); aspect-ratio: auto; }
+            .about-header { padding: 4rem; }
+            .about-list-item { padding: 3rem; }
+            .about-cta-bar { flex-direction: row; justify-content: space-between; padding: 4rem; }
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services-section { padding: 4rem 0; border-bottom: 1px solid var(--color-border); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .service-card {
+            border: 1px solid var(--color-border);
+            padding: 2rem;
+            background-color: #080808;
+            transition: border-color 0.3s ease;
+        }
+        .service-card:hover { border-color: rgba(138,43,226, 0.5); }
+        
+        .service-icon {
+            width: 2.5rem; height: 2.5rem;
+            background-color: rgba(255,255,255,0.05);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+        .badge-pill {
+            display: inline-block;
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-primary);
+            border: 1px solid rgba(138,43,226, 0.3);
+            background-color: rgba(138,43,226, 0.1);
+            padding: 0.375rem 0.75rem;
+            border-radius: 2px;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-section { padding: 6rem 0; }
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* --- PORTFOLIO SECTION --- */
+        .portfolio-section { position: relative; border-bottom: 1px solid var(--color-border); }
+        .portfolio-container { padding: 4rem 1rem; border-left: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); }
+        .portfolio-header { display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 4rem; padding: 0 1.5rem; }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .project-card {
+            position: relative;
+            border-right: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            aspect-ratio: 9/16;
+            overflow: hidden;
+            background-color: #111;
+            cursor: pointer;
+        }
+        
+        .project-thumb {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        .project-card:hover .project-thumb { transform: scale(1.05); }
+        
+        .project-overlay {
+            position: absolute; inset: 0;
+            background-color: rgba(0,0,0,0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .project-overlay { opacity: 1; }
+
+        .project-info {
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            padding: 1rem;
+            transform: translateY(1rem);
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+        .project-card:hover .project-info { transform: translateY(0); }
+
+        .play-btn {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 3rem; height: 3rem;
+            border: 1px solid white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 1;
+            backdrop-filter: blur(4px);
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        
+        @media (min-width: 768px) {
+            .portfolio-header { flex-direction: row; align-items: flex-end; }
+            .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+            .play-btn { width: 4rem; height: 4rem; opacity: 0; }
+            .project-card:hover .play-btn { opacity: 1; }
+            .project-info { padding: 1.5rem; }
+        }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials-section { border-bottom: 1px solid var(--color-border); }
+        .testimonials-layout { display: flex; flex-direction: column; border-left: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); }
+        .testimonials-header { width: 100%; padding: 4rem 1.5rem; border-right: 1px solid var(--color-border); }
+        .testimonials-list { width: 100%; }
+        .testimonial-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 2rem;
+            transition: background 0.3s;
+        }
+        .testimonial-item:last-child { border-bottom: none; }
+        .testimonial-item:hover { background-color: rgba(255,255,255,0.05); }
+
+        @media (min-width: 768px) {
+            .testimonials-layout { flex-direction: row; }
+            .testimonials-header { width: 33.333%; padding: 6rem 1.5rem; }
+            .testimonials-list { width: 66.666%; }
+            .testimonial-item { padding: 3rem; }
+        }
+
+        /* --- FAQ --- */
+        .faq-section { padding: 6rem 0; border-bottom: 1px solid var(--color-border); }
+        .faq-container { max-width: 56rem; margin: 0 auto; padding: 0 1.5rem; }
+        
+        details.group {
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+        summary {
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 1.25rem; font-weight: 700; text-transform: uppercase;
+            list-style: none; transition: color 0.3s;
+        }
+        summary::-webkit-details-marker { display: none; }
+        details.group:hover summary { color: var(--color-primary); }
+        
+        .faq-icon { transition: transform 0.3s ease; }
+        details[open] .faq-icon { transform: rotate(180deg); }
+        
+        .faq-answer {
+            color: #9ca3af;
+            margin-top: 1rem;
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* --- AGENDA --- */
+        .agenda-section { padding: 4rem 0; border-bottom: 1px solid var(--color-border); }
+        .agenda-embed-container {
+            width: 100%;
+            max-width: 1024px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- FOOTER --- */
+        .footer { padding: 4rem 0; border-top: 1px solid var(--color-border); background-color: var(--color-dark); }
+        .footer-layout {
+            display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 3rem;
+        }
+        .footer-brand h2 {
+            font-size: 12vw; line-height: 1; letter-spacing: -0.05em;
+        }
+        .footer-socials { display: flex; gap: 1rem; }
+        .social-link {
+            padding: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #9ca3af;
+            transition: all 0.3s;
+        }
+        .social-link:hover {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .footer-layout { flex-direction: row; align-items: flex-end; }
+            .footer-brand h2 { font-size: 6rem; }
+        }
+
+        /* --- MODAL --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.95);
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+        }
+        .modal-overlay.open { display: flex; }
+        
+        .modal-content {
+            position: relative;
+            height: 80vh;
+            aspect-ratio: 9/16;
+            background-color: black;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: -3rem; right: 0;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex; align-items: center; gap: 0.5rem;
+            transition: color 0.3s;
+        }
+        .close-btn:hover { color: var(--color-primary); }
+
+        /* UX Improvement: Fixed close button on mobile for better reach */
+        @media (max-width: 767px) {
+            .close-btn {
+                position: fixed;
+                top: 15px;
+                right: 15px;
+                background: rgba(0,0,0,0.6);
+                padding: 10px 15px;
+                border-radius: 4px;
+                z-index: 10001;
+                font-size: 0.875rem;
+                backdrop-filter: blur(4px);
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+            .modal-content { height: 75vh; margin-top: 20px; }
+        }
+
+        @media (min-width: 768px) {
+            .modal-content { height: 90vh; }
+            .close-btn { top: -2.5rem; }
+        }
+
+        /* --- ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Icons */
+        svg { display: block; }
     </style>
 
     <!-- Structured Data (JSON-LD) -->
@@ -109,7 +750,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Fábio Augusto - Videomaker e Estrategista",
-      "image": "https://i.ibb.co/PZhsnMGN/MG-9880-Original.jpg",
+      "image": "https://fabioaugustovideomaker.com.br/assets/img/fabio-augusto-perfil.webp",
       "description": "Produção audiovisual e estratégia digital para profissionais da saúde em Fortaleza.",
       "url": "https://fabioaugustovideomaker.com.br/",
       "priceRange": "$$$",
@@ -131,406 +772,521 @@
 <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
-<body class="relative min-h-screen bg-dark text-white font-sans selection:bg-primary selection:text-white">
+<body>
 
     <!-- Noise Texture Overlay -->
-    <div 
-        class="fixed inset-0 z-0 opacity-[0.03] pointer-events-none"
-        style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E')"
-    ></div>
+    <div class="noise-overlay"></div>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 border-b border-white/10 backdrop-blur-sm h-[70px]">
-      <div class="container mx-auto max-w-7xl px-4 md:px-6 flex justify-between items-stretch h-full">
+    <nav class="navbar">
+      <div class="container nav-container">
         <!-- Logo -->
-        <div onclick="scrollToSection('home')" class="flex items-center text-xl font-bold text-white tracking-tighter uppercase cursor-pointer hover:text-primary transition-colors font-grotesk border-r border-white/10 pr-8">
+        <div onclick="scrollToSection('home')" class="logo">
           Fábio Augusto
         </div>
 
         <!-- Desktop Menu -->
-        <div class="hidden md:flex items-stretch ml-auto">
-          <button onclick="scrollToSection('home')" class="px-6 h-full text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white hover:bg-white/5 border-l border-white/10 transition-all">Início</button>
-          <button onclick="scrollToSection('sobre')" class="px-6 h-full text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white hover:bg-white/5 border-l border-white/10 transition-all">Metodologia</button>
-          <button onclick="scrollToSection('portfolio')" class="px-6 h-full text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white hover:bg-white/5 border-l border-white/10 transition-all">Projetos</button>
-          <button onclick="scrollToSection('depoimentos')" class="px-6 h-full text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white hover:bg-white/5 border-l border-white/10 transition-all">Clientes</button>
-          <button onclick="scrollToSection('agenda')" class="px-8 h-full bg-primary text-white hover:bg-[#7a26c9] text-xs font-bold uppercase tracking-widest border-l border-white/10 transition-all flex items-center gap-2">
+        <div class="desktop-menu">
+          <button onclick="scrollToSection('home')" class="nav-link">Início</button>
+          <button onclick="scrollToSection('sobre')" class="nav-link">Especialidade</button>
+          <button onclick="scrollToSection('servicos')" class="nav-link">Serviços</button>
+          <button onclick="scrollToSection('portfolio')" class="nav-link">Projetos</button>
+          <button onclick="scrollToSection('agenda')" class="nav-link btn-cta-nav">
             Agendar Sessão
           </button>
         </div>
 
         <!-- Mobile Controls -->
-        <div class="flex md:hidden items-center gap-4 pl-4">
-          <button onclick="scrollToSection('agenda')" class="text-primary font-bold text-sm uppercase tracking-wider">Agendar</button>
-          <button onclick="toggleMobileMenu()" class="text-white p-2 border-l border-white/10 h-full flex items-center justify-center w-14">
+        <div class="mobile-controls">
+          <button onclick="scrollToSection('agenda')" class="text-primary" style="font-weight: 700; font-size: 0.875rem; text-transform: uppercase;">Agendar</button>
+          <button onclick="toggleMobileMenu()" class="mobile-menu-btn">
             <!-- Menu Icon -->
             <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             <!-- X Icon (Hidden by default) -->
-            <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <svg id="close-icon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           </button>
         </div>
       </div>
 
       <!-- Mobile Menu Overlay -->
-      <div id="mobile-menu" class="hidden md:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] bg-[#050505] flex flex-col z-40 border-t border-white/10">
-        <button onclick="scrollToSection('home')" class="text-left py-6 px-6 border-b border-white/10 text-xl font-bold uppercase tracking-tighter text-gray-300 hover:text-white hover:bg-white/5 hover:pl-8 transition-all">Início</button>
-        <button onclick="scrollToSection('sobre')" class="text-left py-6 px-6 border-b border-white/10 text-xl font-bold uppercase tracking-tighter text-gray-300 hover:text-white hover:bg-white/5 hover:pl-8 transition-all">Metodologia</button>
-        <button onclick="scrollToSection('portfolio')" class="text-left py-6 px-6 border-b border-white/10 text-xl font-bold uppercase tracking-tighter text-gray-300 hover:text-white hover:bg-white/5 hover:pl-8 transition-all">Projetos</button>
-        <button onclick="scrollToSection('depoimentos')" class="text-left py-6 px-6 border-b border-white/10 text-xl font-bold uppercase tracking-tighter text-gray-300 hover:text-white hover:bg-white/5 hover:pl-8 transition-all">Clientes</button>
-        <button onclick="scrollToSection('agenda')" class="text-left py-6 px-6 border-b border-white/10 text-xl font-bold uppercase tracking-tighter text-primary hover:bg-primary/10 flex items-center gap-2">
+      <div id="mobile-menu" class="mobile-menu">
+        <button onclick="scrollToSection('home')" class="mobile-link">Início</button>
+        <button onclick="scrollToSection('sobre')" class="mobile-link">Especialidade</button>
+        <button onclick="scrollToSection('servicos')" class="mobile-link">Serviços</button>
+        <button onclick="scrollToSection('portfolio')" class="mobile-link">Projetos</button>
+        <button onclick="scrollToSection('agenda')" class="mobile-link text-primary" style="display: flex; align-items: center; gap: 0.5rem;">
             Agendar Agora 
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
         </button>
       </div>
     </nav>
 
-    <main class="relative z-10">
+    <main style="position: relative; z-index: 10;">
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex flex-col pt-[70px] border-b border-white/10 overflow-hidden">
+        <section id="home" class="hero-section">
             <!-- Grid Lines -->
-            <div class="absolute inset-0 pointer-events-none z-0 flex justify-center">
-                <div class="w-full max-w-7xl border-x border-white/5 h-full relative">
-                    <div class="absolute top-0 left-1/4 w-px h-full bg-white/5 hidden md:block"></div>
-                    <div class="absolute top-0 left-2/4 w-px h-full bg-white/5 hidden md:block"></div>
-                    <div class="absolute top-0 left-3/4 w-px h-full bg-white/5 hidden md:block"></div>
+            <div class="grid-lines">
+                <div class="grid-lines-inner">
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
                 </div>
             </div>
 
-            <div class="flex-grow flex flex-col justify-center container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-12 md:py-0">
-                <div class="reveal flex items-center gap-4 mb-6 md:mb-12 pl-1">
-                    <div class="w-8 md:w-12 h-px bg-primary"></div>
-                    <span class="text-primary font-mono text-[10px] md:text-xs uppercase tracking-[0.2em]">Videomaker & Estrategista em Fortaleza</span>
+            <div class="container hero-content">
+                <div class="reveal badge-header">
+                    <div class="line-accent"></div>
+                    <span class="text-primary font-mono" style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;">Videomaker & Estrategista em Fortaleza</span>
                 </div>
 
                 <div class="reveal delay-100">
-                    <h1 class="text-[12vw] md:text-[9rem] leading-[1.1] font-bold uppercase tracking-tight font-grotesk py-4 mb-4 md:mb-8 break-words">
-                        Estratégia <br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Audiovisual para</span> <br/>
-                        <span class="text-primary outline-text">Profissionais da Saúde</span>
+                    <h1 class="hero-title">
+                        Vídeos de Alto Padrão <br/>
+                        <span class="text-gradient">Para Médicos e</span> <br/>
+                        <span class="outline-text">Profissionais da Saúde em Fortaleza</span>
                     </h1>
                 </div>
 
-                <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 md:gap-0 max-w-6xl">
-                    <div class="reveal delay-200 w-full md:max-w-2xl">
-                        <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed border-l-2 border-primary pl-6">
-                            Marketing e produção de vídeos high-end para médicos, dentistas, psicólogos e nutricionistas em <strong>Fortaleza</strong>. Do roteiro à captação, transformamos conhecimento técnico em autoridade digital.
-                        </p>
+                <div class="hero-layout">
+                    <div class="reveal delay-200 hero-desc-col">
+                        <h2 class="hero-subtitle">
+                            Transforme seu conhecimento técnico em <strong style="color:white">autoridade digital</strong>. <br/>Atraia pacientes qualificados e valorize sua consulta com vídeos estratégicos, éticos e elegantes.
+                        </h2>
+                        
+                        <!-- Trust Badges -->
+                        <div class="trust-badges">
+                            <div class="trust-badge">
+                                <span class="dot"></span>
+                                <span>+5 anos atendendo profissionais da saúde</span>
+                            </div>
+                            <div class="trust-badge">
+                                <span class="dot"></span>
+                                <span>+3.000 vídeos produzidos</span>
+                            </div>
+                            <div class="trust-badge">
+                                <span class="dot"></span>
+                                <span>Base em Fortaleza–CE</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="reveal delay-300 w-full md:w-auto">
-                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 w-full md:w-auto">
-                            <div class="hidden md:flex flex-col items-end text-right">
-                                <span class="text-xs text-gray-500 uppercase tracking-widest mb-1">Atendimento</span>
-                                <div class="flex items-center gap-2 text-white font-medium">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                                    Fortaleza & Região
-                                </div>
-                            </div>
-                            <button onclick="scrollToSection('agenda')" class="relative inline-flex items-center justify-center px-8 py-4 font-bold transition-all duration-300 group overflow-hidden tracking-wider text-sm uppercase bg-primary text-white hover:bg-[#7022b8] w-full md:w-auto min-h-[56px]">
-                                <span class="relative z-10 flex items-center gap-2">
-                                    Agendar Produção
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                                </span>
-                            </button>
-                        </div>
+                    <div class="reveal delay-300 hero-actions">
+                         <button onclick="scrollToSection('agenda')" class="btn-primary">
+                            Agendar conversa rápida
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </button>
+                        <button onclick="scrollToSection('portfolio')" class="btn-secondary">
+                            Ver Projetos
+                        </button>
+                        <p style="font-size: 0.65rem; color: #6b7280; text-align: center; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Conversa rápida e sem compromisso</p>
                     </div>
                 </div>
             </div>
 
             <!-- Marquee -->
-            <div class="border-t border-white/10 bg-[#0A0A0A] py-3 md:py-4 overflow-hidden relative z-20">
-                <div class="flex whitespace-nowrap animate-marquee">
-                    <!-- Repeated items -->
-                     <div class="flex items-center">
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase stroke-text opacity-30 mx-4">VIDEOMAKER EM FORTALEZA</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase text-white mx-4">MARKETING MÉDICO</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase stroke-text opacity-30 mx-4">PRODUÇÃO AUDIOVISUAL</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase stroke-text opacity-30 mx-4">VIDEOMAKER EM FORTALEZA</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase text-white mx-4">MARKETING MÉDICO</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase stroke-text opacity-30 mx-4">PRODUÇÃO AUDIOVISUAL</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                         <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase stroke-text opacity-30 mx-4">VIDEOMAKER EM FORTALEZA</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase text-white mx-4">MARKETING MÉDICO</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
-                        <div class="flex items-center mx-4"><span class="text-xl md:text-4xl font-bold uppercase stroke-text opacity-30 mx-4">PRODUÇÃO AUDIOVISUAL</span><span class="w-2 h-2 bg-primary rounded-full"></span></div>
+            <div class="marquee-container">
+                <div class="marquee-content">
+                     <div class="marquee-item">
+                        <span class="marquee-stroke marquee-text">VIDEOMAKER EM FORTALEZA</span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="marquee-item">
+                        <span class="marquee-text" style="color: white;">MARKETING MÉDICO</span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="marquee-item">
+                        <span class="marquee-stroke marquee-text">PRODUÇÃO AUDIOVISUAL</span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="marquee-item">
+                        <span class="marquee-stroke marquee-text">VIDEOMAKER EM FORTALEZA</span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="marquee-item">
+                        <span class="marquee-text" style="color: white;">MARKETING MÉDICO</span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="marquee-item">
+                        <span class="marquee-stroke marquee-text">PRODUÇÃO AUDIOVISUAL</span>
+                        <span class="dot"></span>
+                    </div>
+                    <!-- Duplicated for seamless loop -->
+                     <div class="marquee-item">
+                        <span class="marquee-stroke marquee-text">VIDEOMAKER EM FORTALEZA</span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="marquee-item">
+                        <span class="marquee-text" style="color: white;">MARKETING MÉDICO</span>
+                        <span class="dot"></span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="sobre" class="bg-[#050505] border-b border-white/10 relative">
-            <div class="container mx-auto max-w-7xl flex flex-col md:flex-row">
+        <section id="sobre" style="background-color: var(--color-dark); border-bottom: 1px solid var(--color-border); position: relative;">
+            <div class="container about-layout">
                 <!-- Left Column: Image -->
-                <div class="w-full md:w-5/12 border-r border-white/10 relative">
-                    <div class="relative md:sticky md:top-[70px]">
-                        <div class="group relative aspect-[3/4] md:h-[calc(100vh-70px)] md:aspect-auto overflow-hidden bg-[#111]">
-                            <img src="https://i.ibb.co/PZhsnMGN/MG-9880-Original.jpg" width="800" height="1200" alt="Fábio Augusto Videomaker em Fortaleza" loading="lazy" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700" />
-                            <div class="absolute bottom-0 left-0 bg-white text-black px-6 py-4">
-                                <h3 class="text-xl font-bold uppercase tracking-tighter">Fábio Augusto</h3>
-                                <p class="text-xs font-mono uppercase tracking-widest mt-1">Videomaker & Strategist</p>
+                <div class="about-image-col">
+                    <div class="sticky-wrapper">
+                        <div class="about-img-container">
+                            <img src="./assets/img/fabio-augusto-perfil.webp" alt="Fábio Augusto Videomaker especialista em saúde" class="about-img" loading="lazy" />
+                            <div style="position: absolute; bottom: 0; left: 0; background: white; color: black; padding: 1rem 1.5rem;">
+                                <h3 style="font-size: 1.25rem; font-weight: 700; letter-spacing: -0.05em;">Fábio Augusto</h3>
+                                <p style="font-size: 0.75rem; font-family: monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Videomaker & Strategist</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Column -->
-                <div class="w-full md:w-7/12">
-                    <div class="p-8 md:p-16 border-b border-white/10">
+                <div class="about-content-col">
+                    <div class="about-header">
                         <div class="reveal">
-                            <h2 class="text-4xl md:text-6xl font-bold uppercase leading-none mb-8 font-grotesk">
-                                Metodologia <br/>
-                                <span class="text-primary">End-to-End.</span>
+                            <span class="text-primary font-mono" style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Posicionamento</span>
+                            <h2 style="font-size: 2.5rem; line-height: 1; margin-bottom: 1.5rem;">
+                                Especialista em Audiovisual <br/> para a Saúde.
                             </h2>
-                            <p class="text-gray-400 text-lg leading-relaxed max-w-xl">
-                                Com 5 anos de mercado e mais de 3.000 vídeos entregues, desenvolvi um processo linear que elimina o caos da produção de conteúdo. Do roteiro à distribuição.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <!-- Item 1 -->
-                        <div class="group border-b border-white/10 p-8 md:p-12 hover:bg-white/5 transition-colors cursor-default">
-                            <div class="reveal">
-                                <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-4">
-                                    <h3 class="text-2xl font-bold text-white uppercase tracking-tight">01. Captação Presencial</h3>
-                                    <span class="text-primary font-mono text-xs uppercase border border-primary px-2 py-1">Set Profissional</span>
-                                </div>
-                                <p class="text-gray-500 text-base md:text-lg max-w-lg group-hover:text-gray-300 transition-colors">
-                                    Vou até seu consultório em Fortaleza com setup de cinema.
+                            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                <p class="text-muted" style="font-size: 1.125rem; max-width: 36rem;">
+                                    Atendo exclusivamente médicos e profissionais da saúde. Isso significa que entendo sua rotina corrida, as restrições éticas do seu conselho (CRM/CRO) e como usar o vídeo para fortalecer sua imagem sem sensacionalismo.
                                 </p>
-                            </div>
-                        </div>
-                        
-                        <!-- Item 2 -->
-                        <div class="group border-b border-white/10 p-8 md:p-12 hover:bg-white/5 transition-colors cursor-default">
-                            <div class="reveal delay-100">
-                                <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-4">
-                                    <h3 class="text-2xl font-bold text-white uppercase tracking-tight">02. Tráfego Pago (Ads)</h3>
-                                    <span class="text-primary font-mono text-xs uppercase border border-primary px-2 py-1">Alta Conversão</span>
-                                </div>
-                                <p class="text-gray-500 text-base md:text-lg max-w-lg group-hover:text-gray-300 transition-colors">
-                                    Gestão estratégica de anúncios para converter visualização em consulta.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <!-- Item 3 -->
-                        <div class="group border-b border-white/10 p-8 md:p-12 hover:bg-white/5 transition-colors cursor-default">
-                            <div class="reveal delay-200">
-                                <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-4">
-                                    <h3 class="text-2xl font-bold text-white uppercase tracking-tight">03. Otimização de Tempo</h3>
-                                    <span class="text-primary font-mono text-xs uppercase border border-primary px-2 py-1">Smart Workflow</span>
-                                </div>
-                                <p class="text-gray-500 text-base md:text-lg max-w-lg group-hover:text-gray-300 transition-colors">
-                                    Produção de 1 mês de conteúdo em uma única diária de gravação.
-                                </p>
+                                
+                                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: #d1d5db;">
+                                    <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" style="margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"/></svg>
+                                        <span>Foco exclusivo em saúde (ética e linguagem adequada).</span>
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" style="margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"/></svg>
+                                        <span>Gravação no seu consultório, sem perda de tempo com deslocamento.</span>
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" style="margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"/></svg>
+                                        <span>Roteiros pensados para pacientes, sem termos técnicos demais.</span>
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary" style="margin-top: 0.25rem;"><polyline points="20 6 9 17 4 12"/></svg>
+                                        <span>Direção completa em cena: fala, postura e uso de teleprompter.</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-8 md:p-16 bg-[#0A0A0A] flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div class="flex flex-col text-center md:text-left">
-                            <span class="text-gray-500 text-xs uppercase tracking-widest mb-2">Próximo Passo</span>
-                            <span class="text-white font-bold text-xl uppercase">Agende sua Sessão</span>
+                    <div style="display: flex; flex-direction: column;">
+                         <div style="padding: 2rem; background-color: var(--color-dark-surface); border-bottom: 1px solid var(--color-border);">
+                            <h3 style="font-size: 1.25rem; margin-bottom: 2rem; color: white;">Como funciona na prática</h3>
+                            
+                            <!-- Steps -->
+                            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                                <div class="reveal" style="display: flex; gap: 1.5rem;">
+                                    <span style="color: var(--color-primary); font-weight: 700; font-size: 1.125rem; font-family: monospace; background: rgba(255,255,255,0.05); width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid var(--color-border); flex-shrink: 0;">01</span>
+                                    <div>
+                                        <h4 style="color: white; margin-bottom: 0.5rem;">Diagnóstico e Estratégia</h4>
+                                        <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Não ligamos a câmera sem motivo. Definimos os temas que atraem o paciente certo para sua especialidade.</p>
+                                        <p style="color: white; font-size: 0.875rem; font-weight: 500; font-style: italic;">"Você para de gravar ‘por gravar’ e passa a produzir vídeos que atraem o paciente certo."</p>
+                                    </div>
+                                </div>
+                                <div class="reveal delay-100" style="display: flex; gap: 1.5rem;">
+                                    <span style="color: var(--color-primary); font-weight: 700; font-size: 1.125rem; font-family: monospace; background: rgba(255,255,255,0.05); width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid var(--color-border); flex-shrink: 0;">02</span>
+                                    <div>
+                                        <h4 style="color: white; margin-bottom: 0.5rem;">O Set no seu Consultório</h4>
+                                        <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Levo estúdio completo (luz, áudio, câmera) até você, respeitando sua agenda.</p>
+                                        <p style="color: white; font-size: 0.875rem; font-weight: 500; font-style: italic;">"Em apenas um turno você resolve o conteúdo do mês inteiro."</p>
+                                    </div>
+                                </div>
+                                <div class="reveal delay-200" style="display: flex; gap: 1.5rem;">
+                                    <span style="color: var(--color-primary); font-weight: 700; font-size: 1.125rem; font-family: monospace; background: rgba(255,255,255,0.05); width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid var(--color-border); flex-shrink: 0;">03</span>
+                                    <div>
+                                        <h4 style="color: white; margin-bottom: 0.5rem;">Direção Guiada</h4>
+                                        <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Tem vergonha? Eu guio sua fala, postura e entonação. Usamos teleprompter para você falar com naturalidade sem decorar texto.</p>
+                                        <p style="color: white; font-size: 0.875rem; font-weight: 500; font-style: italic;">"Você não precisa ter experiência em frente às câmeras; eu conduzo tudo."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                                <a href="https://api.whatsapp.com/send?phone=5585992300926&text=Olá,%20gostaria%20de%20saber%20como%20funciona%20para%20minha%20especialidade" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #9ca3af;">
+                                    Quero ver como isso funcionaria na minha especialidade 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </a>
+                            </div>
                         </div>
-                        <button onclick="scrollToSection('agenda')" class="w-full md:w-auto h-14 px-8 bg-white text-black hover:bg-primary hover:text-white transition-all font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-                            Reservar Horário 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                    </div>
+
+                    <div class="about-cta-bar">
+                        <div style="display: flex; flex-direction: column; text-align: left;">
+                            <span class="text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Ideal para sua especialidade?</span>
+                            <span style="color: white; font-weight: 700; font-size: 1.125rem; text-transform: uppercase;">Vamos analisar seu caso</span>
+                        </div>
+                        <button onclick="scrollToSection('agenda')" class="btn-primary" style="height: 3rem; font-size: 0.75rem;">
+                            Agendar conversa rápida
                         </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="bg-[#050505] relative border-b border-white/10">
-            <div class="container mx-auto max-w-7xl px-4 md:px-0 py-16 md:py-24 border-x border-white/5">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-16 px-6">
+        <!-- Services Section -->
+        <section id="servicos" class="services-section">
+            <div class="container">
+                 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
                     <div class="reveal">
-                        <h2 class="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-4 font-grotesk">
-                            Projetos <br/> Selecionados
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; line-height: 1;">
+                            O que produzimos
                         </h2>
-                    </div>
-                    <div class="reveal delay-200">
-                        <p class="text-gray-400 font-mono text-xs md:text-sm uppercase tracking-widest mb-2 text-left md:text-right">
-                            Formato Vertical (9:16) <br/> Foco em Retenção
+                        <p class="font-mono text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">
+                            Soluções audiovisuais completas para clínicas e consultórios.
                         </p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 border-t border-white/10">
-                    <!-- Projects -->
-                    <div class="reveal" onclick="openVideo('https://vimeo.com/1142290171?fl=tl&fe=ec')">
-                        <div class="group relative border-r border-b border-white/10 aspect-[9/16] overflow-hidden bg-[#111] cursor-pointer">
-                            <div class="w-full h-full relative">
-                                <img src="https://i.ibb.co/LdRbwHVp/1124-1.png" width="720" height="1280" alt="Vídeo de posicionamento para Psicóloga Liana Souto" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="absolute bottom-0 left-0 w-full p-4 md:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
-                                <span class="inline-block px-2 py-1 bg-primary text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-2">Psicóloga</span>
-                                <h3 class="text-white text-base md:text-lg font-bold uppercase leading-tight">Liana Souto</h3>
-                            </div>
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 border border-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white ml-1"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                            </div>
+                <div class="services-grid">
+                    <!-- Card 1 -->
+                    <div class="reveal service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                        </div>
+                        <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem;">Conteúdo Mensal (Reels)</h3>
+                        <p class="text-muted" style="font-size: 0.875rem;">
+                            Pacotes recorrentes para manter seu Instagram ativo com vídeos educativos e de posicionamento. Essencial para criar autoridade constante.
+                        </p>
+                        <div style="padding-top: 1rem; border-top: 1px solid var(--color-border); margin-top: 1.5rem;">
+                             <p style="font-size: 0.75rem; color: white; font-weight: 500;">Ideal para não deixar seu Instagram parado mesmo com agenda cheia.</p>
+                        </div>
+                        <span class="badge-pill">O mais procurado</span>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="reveal delay-100 service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25V7.86c0-.55-.45-1-1-1H16.4c-.84 0-1.65-.33-2.25-.93L12.9 4.7"/><path d="M7 21h10"/></svg>
+                        </div>
+                        <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem;">Vídeo Institucional</h3>
+                        <p class="text-muted" style="font-size: 0.875rem;">
+                            Apresentação premium da sua clínica, estrutura e equipe. Um ativo digital de alto valor para usar no site e na recepção do consultório.
+                        </p>
+                         <div style="padding-top: 1rem; border-top: 1px solid var(--color-border); margin-top: 1.5rem;">
+                             <p style="font-size: 0.75rem; color: white; font-weight: 500;">Ideal para passar credibilidade imediata para novos pacientes.</p>
                         </div>
                     </div>
 
-                    <div class="reveal delay-100" onclick="openVideo('https://vimeo.com/1142290813?fl=tl&fe=ec')">
-                         <div class="group relative border-r border-b border-white/10 aspect-[9/16] overflow-hidden bg-[#111] cursor-pointer">
-                            <div class="w-full h-full relative">
-                                <img src="https://i.ibb.co/k6sbB00F/1027-3-1.png" width="720" height="1280" alt="Vídeo marketing para Psicóloga Nara Cosme" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="absolute bottom-0 left-0 w-full p-4 md:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
-                                <span class="inline-block px-2 py-1 bg-primary text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-2">Psicóloga</span>
-                                <h3 class="text-white text-base md:text-lg font-bold uppercase leading-tight">Nara Cosme</h3>
-                            </div>
-                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 border border-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white ml-1"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                            </div>
+                    <!-- Card 3 -->
+                    <div class="reveal delay-200 service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                        </div>
+                        <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0.75rem;">Anúncios (Ads)</h3>
+                        <p class="text-muted" style="font-size: 0.875rem;">
+                            Vídeos com roteiro focado em conversão para campanhas de Meta Ads. Feitos para captar pacientes particulares para procedimentos específicos.
+                        </p>
+                         <div style="padding-top: 1rem; border-top: 1px solid var(--color-border); margin-top: 1.5rem;">
+                             <p style="font-size: 0.75rem; color: white; font-weight: 500;">Ideal para lotar a agenda com procedimentos de maior valor.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div style="margin-top: 3rem; text-center;">
+                    <button onclick="scrollToSection('agenda')" class="btn-primary" style="background-color: white; color: black;">
+                        Agendar conversa rápida
+                    </button>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container portfolio-container">
+                <div class="portfolio-header">
+                    <div class="reveal">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; line-height: 1; letter-spacing: -0.05em;">
+                            Projetos <br/> Selecionados
+                        </h2>
+                    </div>
+                    <div class="reveal delay-200">
+                        <p class="font-mono text-muted" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; text-align: right;">
+                            Alguns dos projetos que já produzimos para <br/> médicos e profissionais em Fortaleza.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="reveal project-card" onclick="openVideo('https://vimeo.com/1142290171?fl=tl&fe=ec')">
+                        <img src="./assets/img/projeto-liana-souto.webp" alt="Vídeo de posicionamento para Psicóloga Liana Souto" class="project-thumb" loading="lazy" />
+                        <div class="project-overlay"></div>
+                        <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
+                             <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Posicionamento</span>
+                        </div>
+                        <div class="project-info">
+                            <span style="background-color: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; margin-bottom: 0.5rem; display: inline-block;">Psicóloga</span>
+                            <h3 style="color: white; font-size: 1.125rem;">Liana Souto</h3>
+                        </div>
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.25rem;"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                         </div>
                     </div>
 
-                    <div class="reveal delay-200" onclick="openVideo('https://vimeo.com/1135953668?fl=tl&fe=ec')">
-                         <div class="group relative border-r border-b border-white/10 aspect-[9/16] overflow-hidden bg-[#111] cursor-pointer">
-                            <div class="w-full h-full relative">
-                                <img src="https://i.ibb.co/Ps30vFFW/ADS-LARA-storie.png" width="720" height="1280" alt="Produção de conteúdo para Nutricionista Lara Macedo" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="absolute bottom-0 left-0 w-full p-4 md:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
-                                <span class="inline-block px-2 py-1 bg-primary text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-2">Nutricionista</span>
-                                <h3 class="text-white text-base md:text-lg font-bold uppercase leading-tight">Lara Macedo</h3>
-                            </div>
-                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 border border-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white ml-1"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                            </div>
+                    <!-- Project 2 -->
+                    <div class="reveal delay-100 project-card" onclick="openVideo('https://vimeo.com/1142290813?fl=tl&fe=ec')">
+                         <img src="./assets/img/projeto-nara-cosme.webp" alt="Vídeo marketing para Psicóloga Nara Cosme" class="project-thumb" loading="lazy" />
+                        <div class="project-overlay"></div>
+                        <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
+                             <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Marketing</span>
+                        </div>
+                        <div class="project-info">
+                             <span style="background-color: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; margin-bottom: 0.5rem; display: inline-block;">Psicóloga</span>
+                            <h3 style="color: white; font-size: 1.125rem;">Nara Cosme</h3>
+                        </div>
+                         <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.25rem;"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                         </div>
                     </div>
 
-                    <div class="reveal" onclick="openVideo('https://vimeo.com/1135954471?fl=tl&fe=ec')">
-                         <div class="group relative border-r border-b border-white/10 aspect-[9/16] overflow-hidden bg-[#111] cursor-pointer">
-                            <div class="w-full h-full relative">
-                                <img src="https://i.ibb.co/pv3JyP3b/1107.png" width="720" height="1280" alt="Vídeo para Nutricionista Rinara Caetano" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="absolute bottom-0 left-0 w-full p-4 md:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
-                                <span class="inline-block px-2 py-1 bg-primary text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-2">Nutricionista</span>
-                                <h3 class="text-white text-base md:text-lg font-bold uppercase leading-tight">Rinara Caetano</h3>
-                            </div>
-                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 border border-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white ml-1"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                            </div>
+                    <!-- Project 3 -->
+                    <div class="reveal delay-200 project-card" onclick="openVideo('https://vimeo.com/1135953668?fl=tl&fe=ec')">
+                         <img src="./assets/img/projeto-lara-macedo.webp" alt="Vídeo de anúncios para Nutricionista Lara Macedo" class="project-thumb" loading="lazy" />
+                        <div class="project-overlay"></div>
+                        <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
+                             <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Anúncios (Ads)</span>
+                        </div>
+                        <div class="project-info">
+                            <span style="background-color: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; margin-bottom: 0.5rem; display: inline-block;">Nutricionista</span>
+                            <h3 style="color: white; font-size: 1.125rem;">Lara Macedo</h3>
+                        </div>
+                         <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.25rem;"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                         </div>
                     </div>
 
-                    <div class="reveal delay-100" onclick="openVideo('https://vimeo.com/1142293112?share=copy&fl=sv&fe=ci')">
-                         <div class="group relative border-r border-b border-white/10 aspect-[9/16] overflow-hidden bg-[#111] cursor-pointer">
-                            <div class="w-full h-full relative">
-                                <img src="https://i.ibb.co/4ZBt35ZN/DSC05056.jpg" width="720" height="1280" alt="Produção Audiovisual para Médica Dra. Renata Giffoni" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="absolute bottom-0 left-0 w-full p-4 md:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
-                                <span class="inline-block px-2 py-1 bg-primary text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-2">Médica</span>
-                                <h3 class="text-white text-base md:text-lg font-bold uppercase leading-tight">Dra. Renata Giffoni</h3>
-                            </div>
-                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 border border-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white ml-1"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                            </div>
+                    <!-- Project 4 -->
+                    <div class="reveal project-card" onclick="openVideo('https://vimeo.com/1135954471?fl=tl&fe=ec')">
+                         <img src="./assets/img/projeto-rinara-caetano.webp" alt="Conteúdo estratégico para Nutricionista Rinara Caetano" class="project-thumb" loading="lazy" />
+                        <div class="project-overlay"></div>
+                        <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
+                             <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Conteúdo</span>
+                        </div>
+                        <div class="project-info">
+                            <span style="background-color: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; margin-bottom: 0.5rem; display: inline-block;">Nutricionista</span>
+                            <h3 style="color: white; font-size: 1.125rem;">Rinara Caetano</h3>
+                        </div>
+                         <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.25rem;"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                         </div>
                     </div>
 
-                    <div class="reveal delay-200" onclick="openVideo('https://vimeo.com/1142294067?share=copy&fl=sv&fe=ci')">
-                         <div class="group relative border-r border-b border-white/10 aspect-[9/16] overflow-hidden bg-[#111] cursor-pointer">
-                            <div class="w-full h-full relative">
-                                <img src="https://i.ibb.co/5xM1C1Ts/1112-co-pia.png" width="720" height="1280" alt="Vídeo para Dentista Luana Ravette" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                            <div class="absolute bottom-0 left-0 w-full p-4 md:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
-                                <span class="inline-block px-2 py-1 bg-primary text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-2">Dentista</span>
-                                <h3 class="text-white text-base md:text-lg font-bold uppercase leading-tight">Luana Ravette</h3>
-                            </div>
-                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 border border-white rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white ml-1"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                            </div>
+                    <!-- Project 5 -->
+                    <div class="reveal delay-100 project-card" onclick="openVideo('https://vimeo.com/1142293112?share=copy&fl=sv&fe=ci')">
+                         <img src="./assets/img/projeto-renata-giffoni.webp" alt="Gravação de vídeo institucional para médica Dra. Renata Giffoni em Fortaleza" class="project-thumb" loading="lazy" />
+                        <div class="project-overlay"></div>
+                        <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
+                             <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Institucional</span>
+                        </div>
+                        <div class="project-info">
+                            <span style="background-color: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; margin-bottom: 0.5rem; display: inline-block;">Médica</span>
+                            <h3 style="color: white; font-size: 1.125rem;">Dra. Renata Giffoni</h3>
+                        </div>
+                         <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.25rem;"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="reveal delay-200 project-card" onclick="openVideo('https://vimeo.com/1142294067?share=copy&fl=sv&fe=ci')">
+                         <img src="./assets/img/projeto-luana-ravette.webp" alt="Campanha de vídeo para Dentista Luana Ravette" class="project-thumb" loading="lazy" />
+                        <div class="project-overlay"></div>
+                        <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
+                             <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Campanha</span>
+                        </div>
+                        <div class="project-info">
+                            <span style="background-color: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; margin-bottom: 0.5rem; display: inline-block;">Dentista</span>
+                            <h3 style="color: white; font-size: 1.125rem;">Luana Ravette</h3>
+                        </div>
+                         <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.25rem;"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                         </div>
                     </div>
                 </div>
 
-                <div class="py-16 text-center border-x border-white/5">
-                    <button onclick="scrollToSection('agenda')" class="group relative inline-flex items-center gap-4 text-base md:text-xl font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
-                        Agendar Produção
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <div style="padding: 4rem 0; text-align: center;">
+                    <button onclick="scrollToSection('agenda')" class="btn-primary" style="background: transparent; border: none; box-shadow: none;">
+                        <span style="display: flex; align-items: center; gap: 1rem; font-size: 1.25rem;">
+                            Agendar conversa rápida
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
                     </button>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials -->
-        <section id="depoimentos" class="bg-[#050505] border-b border-white/10">
-            <div class="container mx-auto max-w-7xl px-4 md:px-0 flex flex-col md:flex-row border-x border-white/5">
+        <section id="depoimentos" class="testimonials-section">
+            <div class="container testimonials-layout">
                 <!-- Header -->
-                <div class="w-full md:w-1/3 py-16 md:py-24 px-6 md:border-r border-white/10">
+                <div class="testimonials-header">
                     <div class="reveal">
-                        <div class="w-12 h-12 bg-primary flex items-center justify-center mb-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-6 h-6"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
+                        <div style="width: 3rem; height: 3rem; background-color: var(--color-primary); display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
                         </div>
-                        <h2 class="text-4xl font-bold uppercase tracking-tighter mb-4 font-grotesk">
+                        <h2 style="font-size: 2.25rem; line-height: 1; margin-bottom: 1rem;">
                             Feedback <br/> Real
                         </h2>
-                        <p class="text-gray-500 font-mono text-xs uppercase tracking-widest max-w-xs">
+                        <p class="font-mono text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; max-width: 15rem;">
                             O impacto gerado na carreira de quem já confia no nosso método.
                         </p>
                     </div>
                 </div>
 
                 <!-- List -->
-                <div class="w-full md:w-2/3">
-                    <div class="border-b border-white/10 last:border-b-0 p-8 md:p-12 hover:bg-white/5 transition-colors group">
+                <div class="testimonials-list">
+                    <div class="testimonial-item group">
                         <div class="reveal">
-                            <p class="text-xl md:text-2xl text-gray-300 font-light italic mb-8 group-hover:text-white transition-colors">
-                                "A qualidade elevou completamente o nível do consultório. Estratégia pura."
+                             <p style="font-size: 1.5rem; font-weight: 300; font-style: italic; margin-bottom: 2rem; color: #d1d5db;">
+                                "<strong style="color: white; font-weight: 700; font-style: normal;">A qualidade elevou completamente o nível do consultório.</strong> Estratégia pura."
                             </p>
-                            <div class="flex items-center gap-4">
-                                <div class="w-2 h-2 bg-primary"></div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 0.5rem; height: 0.5rem; background-color: var(--color-primary);"></div>
                                 <div>
-                                    <h4 class="font-bold text-white uppercase text-sm tracking-wide">Liana Souto</h4>
-                                    <p class="text-gray-500 text-xs uppercase tracking-widest">Psicóloga</p>
+                                    <h4 style="font-weight: 700; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Liana Souto</h4>
+                                    <p class="text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Psicóloga</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="border-b border-white/10 last:border-b-0 p-8 md:p-12 hover:bg-white/5 transition-colors group">
+                    <div class="testimonial-item group">
                         <div class="reveal delay-100">
-                            <p class="text-xl md:text-2xl text-gray-300 font-light italic mb-8 group-hover:text-white transition-colors">
-                                "Vergonha de gravar era meu problema. A direção do Fábio resolveu isso na hora."
+                            <p style="font-size: 1.5rem; font-weight: 300; font-style: italic; margin-bottom: 2rem; color: #d1d5db;">
+                                "<strong style="color: white; font-weight: 700; font-style: normal;">Vergonha de gravar era meu problema.</strong> A direção do Fábio resolveu isso na hora."
                             </p>
-                            <div class="flex items-center gap-4">
-                                <div class="w-2 h-2 bg-primary"></div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 0.5rem; height: 0.5rem; background-color: var(--color-primary);"></div>
                                 <div>
-                                    <h4 class="font-bold text-white uppercase text-sm tracking-wide">Nara Cosme</h4>
-                                    <p class="text-gray-500 text-xs uppercase tracking-widest">Psicóloga</p>
+                                    <h4 style="font-weight: 700; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Nara Cosme</h4>
+                                    <p class="text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Psicóloga</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="border-b border-white/10 last:border-b-0 p-8 md:p-12 hover:bg-white/5 transition-colors group">
+                    <div class="testimonial-item group">
                         <div class="reveal delay-200">
-                            <p class="text-xl md:text-2xl text-gray-300 font-light italic mb-8 group-hover:text-white transition-colors">
-                                "Roteiros certeiros e tráfego pago com ROI excelente. Parceria vitalícia."
+                             <p style="font-size: 1.5rem; font-weight: 300; font-style: italic; margin-bottom: 2rem; color: #d1d5db;">
+                                "Roteiros certeiros e <strong style="color: white; font-weight: 700; font-style: normal;">tráfego pago com ROI excelente.</strong> Parceria vitalícia."
                             </p>
-                            <div class="flex items-center gap-4">
-                                <div class="w-2 h-2 bg-primary"></div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 0.5rem; height: 0.5rem; background-color: var(--color-primary);"></div>
                                 <div>
-                                    <h4 class="font-bold text-white uppercase text-sm tracking-wide">Luana Ravette</h4>
-                                    <p class="text-gray-500 text-xs uppercase tracking-widest">Dentista</p>
+                                    <h4 style="font-weight: 700; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Luana Ravette</h4>
+                                    <p class="text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Dentista</p>
                                 </div>
                             </div>
                         </div>
@@ -540,60 +1296,63 @@
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="bg-[#050505] border-b border-white/10 py-24">
-            <div class="container mx-auto max-w-4xl px-4 md:px-6">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-4 font-grotesk">
-                        Dúvidas <span class="text-primary">Frequentes</span>
-                    </h2>
+        <section id="faq" class="faq-section">
+            <div class="faq-container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <div class="reveal">
+                        <h2 style="font-size: 3rem; margin-bottom: 1rem;">
+                            Dúvidas <span class="text-primary">Comuns</span>
+                        </h2>
+                        <p class="font-mono text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Perguntas que recebo frequentemente no WhatsApp</p>
+                    </div>
                 </div>
 
-                <div class="space-y-4">
-                    <details class="group border-b border-white/10 pb-4 cursor-pointer reveal">
-                        <summary class="flex justify-between items-center font-bold text-xl md:text-2xl text-white uppercase list-none transition-colors group-hover:text-primary">
-                            Você atende apenas médicos?
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                <div>
+                    <details class="group reveal">
+                        <summary>
+                            Não tenho tempo para gravar toda semana.
+                            <span class="faq-icon">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                             </span>
                         </summary>
-                        <p class="text-gray-400 mt-4 text-lg leading-relaxed font-light">
-                            Não. Atendemos todos os profissionais da saúde que buscam autoridade: médicos, dentistas, psicólogos e nutricionistas em Fortaleza.
+                        <p class="faq-answer">
+                            Nosso método "Smart Workflow" permite gravar conteúdo para <strong>um mês inteiro em apenas um turno (manhã ou tarde)</strong>. Você foca no atendimento, nós focamos na produção.
                         </p>
                     </details>
 
-                    <details class="group border-b border-white/10 pb-4 cursor-pointer reveal delay-100">
-                        <summary class="flex justify-between items-center font-bold text-xl md:text-2xl text-white uppercase list-none transition-colors group-hover:text-primary">
-                            Como funciona a gravação?
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    <details class="group reveal delay-100">
+                        <summary>
+                            Tenho vergonha e travo na frente da câmera.
+                            <span class="faq-icon">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                             </span>
                         </summary>
-                        <p class="text-gray-400 mt-4 text-lg leading-relaxed font-light">
-                            Levamos o estúdio de cinema até seu consultório. Otimizamos seu tempo: gravamos conteúdo para um mês inteiro em apenas um turno (manhã ou tarde).
+                        <p class="faq-answer">
+                            Totalmente normal. Por isso, não sou apenas "cameraman", sou diretor. Eu guio sua fala, postura e usamos <strong>teleprompter</strong> para que você fale com segurança, sem precisar decorar textos longos. Na prática, você esquece que está sendo filmado.
                         </p>
                     </details>
 
-                    <details class="group border-b border-white/10 pb-4 cursor-pointer reveal delay-200">
-                        <summary class="flex justify-between items-center font-bold text-xl md:text-2xl text-white uppercase list-none transition-colors group-hover:text-primary">
-                            Tenho vergonha de gravar, e agora?
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    <details class="group reveal delay-200">
+                        <summary>
+                            Você cuida do Tráfego Pago (Anúncios)?
+                            <span class="faq-icon">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                             </span>
                         </summary>
-                        <p class="text-gray-400 mt-4 text-lg leading-relaxed font-light">
-                            Essa é nossa especialidade. Utilizamos técnicas de direção e teleprompter, onde eu guio cada frase sua. O resultado é uma fala natural e segura, sem travamentos.
+                        <p class="faq-answer">
+                            Sim. Vídeo bonito sem distribuição não gera paciente. Criamos a estratégia de distribuição (<strong>Meta Ads</strong>) para garantir que seu conteúdo chegue aos pacientes certos na região de Fortaleza, respeitando a ética médica.
                         </p>
                     </details>
 
-                    <details class="group border-b border-white/10 pb-4 cursor-pointer reveal delay-300">
-                        <summary class="flex justify-between items-center font-bold text-xl md:text-2xl text-white uppercase list-none transition-colors group-hover:text-primary">
-                            Vocês fazem gestão de tráfego (Ads)?
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    <details class="group reveal delay-300">
+                        <summary>
+                            Atende apenas médicos?
+                            <span class="faq-icon">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                             </span>
                         </summary>
-                        <p class="text-gray-400 mt-4 text-lg leading-relaxed font-light">
-                            Sim. Não entregamos apenas o vídeo. Criamos a estratégia de distribuição (Meta Ads) para garantir que seu conteúdo chegue aos pacientes certos na região de Fortaleza.
+                        <p class="faq-answer">
+                            Atendo profissionais da saúde que dependem de autoridade e confiança: Médicos, Dentistas, Nutricionistas, Psicólogos e Fisioterapeutas.
                         </p>
                     </details>
                 </div>
@@ -601,60 +1360,50 @@
         </section>
 
         <!-- Scheduling -->
-        <section id="agenda" class="bg-[#050505] border-b border-white/10 relative py-16 md:py-24">
-            <div class="container mx-auto max-w-7xl px-4 md:px-6 border-x border-white/5">
-                <div class="flex flex-col items-center text-center mb-16">
-                    <div class="reveal">
-                        <div class="w-12 h-12 bg-primary flex items-center justify-center mb-6 mx-auto">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-6 h-6"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-                        </div>
-                        <h2 class="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-4 font-grotesk">
-                            Agende sua <br/> <span class="text-primary">Sessão</span>
-                        </h2>
-                        <p class="text-gray-400 max-w-xl mx-auto text-xs md:text-sm uppercase tracking-widest font-mono mb-8">
-                            Selecione o melhor horário para alinharmos sua estratégia.
-                        </p>
-                        
-                        <a href="https://api.whatsapp.com/send?phone=5585992300926&text=Olá,%20vim%20pelo%20site" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors border-b border-gray-700 hover:border-white pb-1 text-sm tracking-wide">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                            Dúvida antes de agendar? Fale no WhatsApp
-                        </a>
+        <section id="agenda" class="agenda-section">
+            <div class="container text-center">
+                <div class="reveal" style="margin-bottom: 4rem;">
+                    <div style="width: 3rem; height: 3rem; background-color: var(--color-primary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
                     </div>
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; line-height: 1.1;">
+                        Agende sua <br/> <span class="text-primary">Sessão</span>
+                    </h2>
+                    <p class="font-mono text-muted" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; max-width: 30rem; margin: 0 auto 2rem auto;">
+                        Selecione o melhor horário para alinharmos sua estratégia de vídeo e presença digital.
+                    </p>
+                    
+                    <a href="https://api.whatsapp.com/send?phone=5585992300926&text=Olá,%20tenho%20dúvida%20antes%20de%20agendar" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 9999px; font-size: 0.875rem; transition: all 0.3s; color: white;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                        Tirar dúvida pelo WhatsApp
+                    </a>
                 </div>
 
-                <div class="reveal w-full">
-                    <div class="w-full max-w-5xl mx-auto bg-white rounded-lg overflow-hidden shadow-2xl border border-white/10">
-                        <iframe src="https://tidycal.com/fabioaugustopoliveira" width="100%" height="900" frameborder="0" class="w-full bg-white" title="Agenda TidyCal" style="min-height: 800px"></iframe>
-                    </div>
+                <div class="reveal agenda-embed-container">
+                    <iframe src="https://tidycal.com/fabioaugustopoliveira" width="100%" height="900" frameborder="0" style="background: white; min-height: 800px; display: block;" title="Agenda TidyCal"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="relative z-10 bg-[#050505] py-16 border-t border-white/10">
-        <div class="container mx-auto max-w-7xl px-4 md:px-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-            <div class="flex flex-col">
-                <h2 class="text-[12vw] md:text-8xl font-bold text-[#111] uppercase tracking-tighter leading-none hover:text-primary transition-colors cursor-default font-grotesk">
-                    Fábio
-                </h2>
-                <h2 class="text-[12vw] md:text-8xl font-bold text-white uppercase tracking-tighter leading-none font-grotesk">
-                    Augusto
-                </h2>
+    <footer class="footer">
+        <div class="container footer-layout">
+            <div class="footer-brand">
+                <h2 style="color: #111;">Fábio</h2>
+                <h2 style="color: white;">Augusto</h2>
             </div>
 
-            <div class="flex flex-col md:items-end gap-6">
-                <div class="flex gap-4">
-                    <a href="https://instagram.com/fabioaugustovideomaker" target="_blank" rel="noopener noreferrer" class="p-4 border border-white/20 hover:bg-primary hover:border-primary hover:text-white transition-all text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-end;">
+                <div class="footer-socials">
+                    <a href="https://instagram.com/fabioaugustovideomaker" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
-                    <a href="https://api.whatsapp.com/send?phone=5585992300926&text=Olá,%20vim%20pelo%20site" target="_blank" rel="noopener noreferrer" class="p-4 border border-white/20 hover:bg-primary hover:border-primary hover:text-white transition-all text-gray-400">
-                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
+                    <a href="https://api.whatsapp.com/send?phone=5585992300926&text=Olá,%20vim%20pelo%20site" target="_blank" rel="noopener noreferrer" class="social-link">
+                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                     </a>
                 </div>
-                <p class="text-gray-600 text-xs uppercase tracking-widest text-right">
+                <p style="color: #4b5563; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; text-align: right; line-height: 1.5;">
                     &copy; 2026 Fábio Augusto. <br/> Todos os direitos reservados.
                 </p>
             </div>
@@ -662,14 +1411,14 @@
     </footer>
 
     <!-- Video Modal -->
-    <div id="video-modal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm hidden" onclick="closeVideo()">
-        <div class="relative h-[80vh] md:h-[90vh] aspect-[9/16] bg-black border border-white/20 shadow-2xl" onclick="event.stopPropagation()">
-            <button onclick="closeVideo()" class="absolute -top-12 md:-top-10 right-0 text-white hover:text-primary transition-colors flex items-center gap-2 uppercase text-xs font-bold tracking-widest p-2">
+    <div id="video-modal" class="modal-overlay" onclick="closeVideo()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeVideo()" class="close-btn">
                 Fechar 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
-            <div class="w-full h-full bg-black">
-                <iframe id="video-frame" class="w-full h-full" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vimeo Video"></iframe>
+            <div style="width: 100%; height: 100%; background: black;">
+                <iframe id="video-frame" style="width: 100%; height: 100%; border: none;" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vimeo Video"></iframe>
             </div>
         </div>
     </div>
@@ -686,7 +1435,7 @@
             }
             // Close mobile menu if open
             const menu = document.getElementById('mobile-menu');
-            if (!menu.classList.contains('hidden')) {
+            if (menu.classList.contains('open')) {
                 toggleMobileMenu();
             }
         }
@@ -696,9 +1445,15 @@
             const menuIcon = document.getElementById('menu-icon');
             const closeIcon = document.getElementById('close-icon');
 
-            menu.classList.toggle('hidden');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            } else {
+                menu.classList.add('open');
+                menuIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            }
         }
 
         // --- Video Modal Logic ---
@@ -713,7 +1468,7 @@
             if (videoId) {
                 const embedUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&byline=0&portrait=0&transparent=0`;
                 frame.src = embedUrl;
-                modal.classList.remove('hidden');
+                modal.classList.add('open');
                 document.body.style.overflow = 'hidden';
             }
         }
@@ -722,7 +1477,7 @@
             const modal = document.getElementById('video-modal');
             const frame = document.getElementById('video-frame');
             
-            modal.classList.add('hidden');
+            modal.classList.remove('open');
             frame.src = ''; // Stop video
             document.body.style.overflow = '';
         }
