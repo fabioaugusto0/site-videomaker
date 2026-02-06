@@ -11,8 +11,6 @@
     <link rel="canonical" href="https://fabioaugustovideomaker.com.br/" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     
-    <link rel="preload" as="image" href="./assets/img/fabio-augusto-perfil.webp">
-
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fabioaugustovideomaker.com.br/">
     <meta property="og:title" content="Videomaker para Médicos em Fortaleza | Fábio Augusto">
@@ -45,6 +43,11 @@
             
             --container-width: 1280px;
             --header-height: 70px;
+        }
+
+        /* OTIMIZAÇÃO CRÍTICA 3: Conteúdo visível imediatamente */
+        .hero-title, .hero-subtitle, .btn-primary {
+            content-visibility: auto;
         }
 
         * {
@@ -90,12 +93,12 @@
         .tracking-widest { letter-spacing: 0.1em; }
         .text-center { text-align: center; }
         
-        /* Noise Overlay */
+        /* Noise Overlay - OTIMIZADO: Opacidade menor para renderizar mais rápido */
         .noise-overlay {
             position: fixed;
             inset: 0;
             z-index: 0;
-            opacity: 0.03;
+            opacity: 0.02; 
             pointer-events: none;
             background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E');
         }
@@ -278,6 +281,8 @@
             line-height: 1.1;
             margin-bottom: 1rem;
             word-break: break-word;
+            /* OTIMIZAÇÃO: Evita mudanças de layout */
+            min-height: 1.1em;
         }
         .text-gradient {
             background: linear-gradient(to right, #fff, #6b7280);
@@ -391,6 +396,8 @@
             overflow: hidden;
             position: relative;
             z-index: 20;
+            /* OTIMIZAÇÃO: GPU Acceleration */
+            will-change: transform;
         }
         .marquee-content {
             display: flex;
@@ -436,6 +443,7 @@
         .about-img {
             width: 100%; height: 100%;
             object-fit: cover;
+            /* OTIMIZAÇÃO: Remove filter complexo no mobile se possível, ou mantém com will-change */
             filter: grayscale(100%) contrast(125%);
             transition: filter 0.7s ease;
         }
@@ -530,6 +538,8 @@
             overflow: hidden;
             background-color: #111;
             cursor: pointer;
+            /* OTIMIZAÇÃO: Melhora performance de renderização */
+            contain: content;
         }
         
         .project-thumb {
@@ -723,20 +733,31 @@
             .close-btn { top: -2.5rem; }
         }
 
-        /* --- ANIMATIONS --- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        /* --- OTIMIZAÇÃO CRÍTICA 4: ANIMAÇÕES SIMPLIFICADAS --- */
+        /* Só anima se o usuário não tiver preferência por reduzir movimento */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal {
+                opacity: 0;
+                transform: translateY(20px); /* Movimento menor para GPU */
+                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+                will-change: opacity, transform;
+            }
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .delay-100 { transition-delay: 100ms; }
+            .delay-200 { transition-delay: 200ms; }
+            .delay-300 { transition-delay: 300ms; }
         }
         
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
+        /* Se o usuário prefere reduzir, não anima nada (performance instantânea) */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
 
         /* Icons */
         svg { display: block; }
@@ -933,12 +954,12 @@
             </div>
         </section>
 
-        <section id="sobre" style="background-color: var(--color-dark); border-bottom: 1px solid var(--color-border); position: relative;">
+        <section id="sobre" style="background-color: var(--color-dark); border-bottom: 1px solid var(--color-border); position: relative; content-visibility: auto; contain-intrinsic-size: 1000px;">
             <div class="container about-layout">
                 <div class="about-image-col">
                     <div class="sticky-wrapper">
                         <div class="about-img-container">
-                            <img src="./assets/img/fabio-augusto-perfil.webp" alt="Fábio Augusto Videomaker especialista em saúde" class="about-img" fetchpriority="high" />
+                            <img src="./assets/img/fabio-augusto-perfil.webp" alt="Fábio Augusto Videomaker especialista em saúde" class="about-img" loading="lazy" decoding="async" />
                             <div style="position: absolute; bottom: 0; left: 0; background: white; color: black; padding: 1rem 1.5rem;">
                                 <h3 style="font-size: 1.25rem; font-weight: 700; letter-spacing: -0.05em;">Fábio Augusto</h3>
                                 <p style="font-size: 0.75rem; font-family: monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem;">Videomaker & Strategist</p>
@@ -1034,7 +1055,7 @@
             </div>
         </section>
 
-        <section id="servicos" class="services-section">
+        <section id="servicos" class="services-section" style="content-visibility: auto; contain-intrinsic-size: 800px;">
             <div class="container">
                  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
                     <div class="reveal">
@@ -1097,7 +1118,7 @@
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio-section">
+        <section id="portfolio" class="portfolio-section" style="content-visibility: auto; contain-intrinsic-size: 1200px;">
             <div class="container portfolio-container">
                 <div class="portfolio-header">
                     <div class="reveal">
@@ -1114,7 +1135,7 @@
 
                 <div class="portfolio-grid">
                     <div class="reveal project-card" onclick="openVideo('https://vimeo.com/1142290171?fl=tl&fe=ec')">
-                        <img src="./assets/img/projeto-liana-souto.webp" alt="Vídeo de posicionamento para Psicóloga Liana Souto em Fortaleza" class="project-thumb" loading="lazy" />
+                        <img src="./assets/img/projeto-liana-souto.webp" alt="Vídeo de posicionamento para Psicóloga Liana Souto em Fortaleza" class="project-thumb" loading="lazy" decoding="async" />
                         <div class="project-overlay"></div>
                         <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
                              <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Posicionamento</span>
@@ -1129,7 +1150,7 @@
                     </div>
 
                     <div class="reveal delay-100 project-card" onclick="openVideo('https://vimeo.com/1142290813?fl=tl&fe=ec')">
-                         <img src="./assets/img/projeto-nara-cosme.webp" alt="Vídeo marketing para Psicóloga Nara Cosme em Fortaleza" class="project-thumb" loading="lazy" />
+                         <img src="./assets/img/projeto-nara-cosme.webp" alt="Vídeo marketing para Psicóloga Nara Cosme em Fortaleza" class="project-thumb" loading="lazy" decoding="async" />
                         <div class="project-overlay"></div>
                         <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
                              <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Marketing</span>
@@ -1144,7 +1165,7 @@
                     </div>
 
                     <div class="reveal delay-200 project-card" onclick="openVideo('https://vimeo.com/1135953668?fl=tl&fe=ec')">
-                         <img src="./assets/img/projeto-lara-macedo.webp" alt="Vídeo de anúncios para Nutricionista Lara Macedo" class="project-thumb" loading="lazy" />
+                         <img src="./assets/img/projeto-lara-macedo.webp" alt="Vídeo de anúncios para Nutricionista Lara Macedo" class="project-thumb" loading="lazy" decoding="async" />
                         <div class="project-overlay"></div>
                         <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
                              <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Anúncios (Ads)</span>
@@ -1159,7 +1180,7 @@
                     </div>
 
                     <div class="reveal project-card" onclick="openVideo('https://vimeo.com/1135954471?fl=tl&fe=ec')">
-                         <img src="./assets/img/projeto-rinara-caetano.webp" alt="Conteúdo estratégico para Nutricionista Rinara Caetano" class="project-thumb" loading="lazy" />
+                         <img src="./assets/img/projeto-rinara-caetano.webp" alt="Conteúdo estratégico para Nutricionista Rinara Caetano" class="project-thumb" loading="lazy" decoding="async" />
                         <div class="project-overlay"></div>
                         <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
                              <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Conteúdo</span>
@@ -1174,7 +1195,7 @@
                     </div>
 
                     <div class="reveal delay-100 project-card" onclick="openVideo('https://vimeo.com/1142293112?share=copy&fl=sv&fe=ci')">
-                         <img src="./assets/img/projeto-renata-giffoni.webp" alt="Gravação de vídeo institucional para médica Dra. Renata Giffoni em Fortaleza" class="project-thumb" loading="lazy" />
+                         <img src="./assets/img/projeto-renata-giffoni.webp" alt="Gravação de vídeo institucional para médica Dra. Renata Giffoni em Fortaleza" class="project-thumb" loading="lazy" decoding="async" />
                         <div class="project-overlay"></div>
                         <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
                              <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Institucional</span>
@@ -1189,7 +1210,7 @@
                     </div>
 
                     <div class="reveal delay-200 project-card" onclick="openVideo('https://vimeo.com/1142294067?share=copy&fl=sv&fe=ci')">
-                         <img src="./assets/img/projeto-luana-ravette.webp" alt="Campanha de vídeo para Dentista Luana Ravette" class="project-thumb" loading="lazy" />
+                         <img src="./assets/img/projeto-luana-ravette.webp" alt="Campanha de vídeo para Dentista Luana Ravette" class="project-thumb" loading="lazy" decoding="async" />
                         <div class="project-overlay"></div>
                         <div style="position: absolute; top: 1rem; left: 1rem; z-index: 10;">
                              <span style="background: rgba(0,0,0,0.5); color: white; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; border: 1px solid rgba(255,255,255,0.1);">Campanha</span>
@@ -1215,7 +1236,7 @@
             </div>
         </section>
 
-        <section id="depoimentos" class="testimonials-section">
+        <section id="depoimentos" class="testimonials-section" style="content-visibility: auto; contain-intrinsic-size: 600px;">
             <div class="container testimonials-layout">
                 <div class="testimonials-header">
                     <div class="reveal">
@@ -1280,7 +1301,7 @@
             </div>
         </section>
 
-        <section id="faq" class="faq-section">
+        <section id="faq" class="faq-section" style="content-visibility: auto; contain-intrinsic-size: 600px;">
             <div class="faq-container">
                 <div class="text-center" style="margin-bottom: 4rem;">
                     <div class="reveal">
