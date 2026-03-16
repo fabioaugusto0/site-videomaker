@@ -179,7 +179,8 @@ button {
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  /* Transições explícitas — apenas propriedades compositor (sem layout recalc) */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   cursor: pointer;
 }
 
@@ -217,7 +218,8 @@ button {
   background: rgba(8, 8, 16, 0.85);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(200, 64, 240, 0.15);
-  transition: all 0.3s ease;
+  /* Transições explícitas na navbar — evita layout recalc no scroll */
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .nav-container {
@@ -593,7 +595,7 @@ button {
   border-radius: 16px;
   padding: 40px;
   text-align: left;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   position: relative;
   overflow: hidden;
 }
@@ -649,7 +651,7 @@ button {
   overflow: hidden;
   aspect-ratio: 16/9;
   position: relative;
-  transition: all 0.4s ease;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -1043,7 +1045,7 @@ button {
 .anim-up {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .anim-up.visible {
