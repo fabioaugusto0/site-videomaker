@@ -1174,3 +1174,164 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+/* Programmatic SEO pages */
+.seo-links-section {
+  border-top: 1px solid rgba(200, 64, 240, 0.12);
+  border-bottom: 1px solid rgba(200, 64, 240, 0.12);
+  background: rgba(18, 18, 30, 0.45);
+}
+
+.seo-link-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.seo-link-grid a {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+  border: 1px solid rgba(200, 64, 240, 0.28);
+  border-radius: 8px;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: rgba(8, 8, 16, 0.58);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.seo-link-grid a:hover {
+  transform: translateY(-2px);
+  border-color: var(--neon-primary);
+  background: rgba(200, 64, 240, 0.12);
+}
+
+.seo-page {
+  min-height: 100vh;
+}
+
+.seo-page a {
+  color: var(--text-secondary);
+}
+
+.seo-header {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.seo-hero {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 84px 0 56px;
+  position: relative;
+  z-index: 2;
+}
+
+.seo-hero h1 {
+  max-width: 940px;
+  font-size: 56px;
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+
+.seo-hero .subtitle {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 34px;
+  max-width: 760px;
+}
+
+.seo-content-grid {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.seo-content-grid article,
+.seo-faq {
+  border: 1px solid rgba(200, 64, 240, 0.22);
+  border-radius: 8px;
+  background: rgba(18, 18, 30, 0.72);
+  padding: 28px;
+}
+
+.seo-content-grid h2,
+.seo-faq h2 {
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+.seo-content-grid p,
+.seo-content-grid li,
+.seo-faq p {
+  color: var(--text-secondary);
+}
+
+.seo-content-grid ul {
+  padding-left: 20px;
+}
+
+.seo-content-grid li + li {
+  margin-top: 8px;
+}
+
+.seo-faq {
+  width: min(1040px, calc(100% - 32px));
+  margin: 18px auto 84px;
+  position: relative;
+  z-index: 2;
+}
+
+.seo-faq details {
+  padding: 16px 0;
+  border-top: 1px solid rgba(200, 64, 240, 0.16);
+}
+
+.seo-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.seo-faq p {
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .seo-link-grid,
+  .seo-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-hero h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .seo-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .seo-hero {
+    padding-top: 48px;
+  }
+
+  .seo-hero h1 {
+    font-size: 34px;
+  }
+}
