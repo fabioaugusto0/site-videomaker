@@ -53,9 +53,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 6. Meta Pixel: track qualified WhatsApp intent as a lead/contact signal.
+    document.querySelectorAll('a[href*="wa.me/5585992300926"]').forEach(link => {
+        link.addEventListener('click', () => {
+            if (typeof fbq !== 'function') return;
+
+            fbq('track', 'Contact', {
+                content_name: 'whatsapp_click',
+                content_category: 'lead'
+            });
+            fbq('trackCustom', 'WhatsAppClick', {
+                link_text: link.textContent.trim() || 'whatsapp',
+                page_path: window.location.pathname
+            });
+        });
+    });
+
 });
 
-// 6. Video Modal Logic (Global Scope)
+// 7. Video Modal Logic (Global Scope)
 window.openVideoModal = function (vimeoId) {
     const modal = document.getElementById('video-modal');
     const container = document.getElementById('modal-video-container');
