@@ -19,14 +19,6 @@
         }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1015192737472352');
         fbq('track', 'PageView');
-        fbq('track', 'Contact', {
-            content_name: 'whatsapp_redirect',
-            content_category: 'lead'
-        });
-        fbq('trackCustom', 'WhatsAppClick', {
-            source: 'redirect_page',
-            page_path: window.location.pathname
-        });
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
@@ -98,11 +90,78 @@
 
     <script>
         const fallbackText = 'Olá Fábio! Vim pelo seu site e quero um diagnóstico para meu consultório.';
+        const leadPrefix = 'FAV';
+        const storageKey = 'fabio_whatsapp_lead';
         const params = new URLSearchParams(window.location.search);
-        const message = params.get('text') || fallbackText;
-        const whatsappUrl = `https://wa.me/5585992300926?${new URLSearchParams({ text: message }).toString()}`;
         const link = document.getElementById('whatsapp-link');
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            return parts.length === 2 ? parts.pop().split(';').shift() : '';
+        }
+
+        function createLeadId() {
+            const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+            const random = Math.random().toString(36).slice(2, 8).toUpperCase();
+            return `${leadPrefix}-${date}-${random}`;
+        }
+
+        function getAttribution() {
+            const keys = [
+                'utm_source',
+                'utm_medium',
+                'utm_campaign',
+                'utm_content',
+                'utm_term',
+                'fbclid',
+                'campaign_id',
+                'adset_id',
+                'ad_id'
+            ];
+
+            return keys.reduce((data, key) => {
+                const value = params.get(key);
+                if (value) data[key] = value;
+                return data;
+            }, {});
+        }
+
+        const leadData = {
+            lead_id: params.get('lead_id') || createLeadId(),
+            created_at: new Date().toISOString(),
+            event_source_url: params.get('source_url') || document.referrer || window.location.href,
+            page_path: window.location.pathname,
+            fbp: getCookie('_fbp'),
+            fbc: getCookie('_fbc'),
+            ...getAttribution()
+        };
+
+        localStorage.setItem(storageKey, JSON.stringify(leadData));
+
+        const baseMessage = params.get('text') || fallbackText;
+        const message = `${baseMessage}\n\nCódigo do atendimento: ${leadData.lead_id}`;
+        const whatsappUrl = `https://wa.me/5585992300926?${new URLSearchParams({ text: message }).toString()}`;
         link.href = whatsappUrl;
+
+        if (typeof fbq === 'function') {
+            fbq('track', 'Contact', {
+                content_name: 'whatsapp_redirect',
+                content_category: 'lead',
+                lead_id: leadData.lead_id
+            }, {
+                eventID: leadData.lead_id
+            });
+            fbq('trackCustom', 'WhatsAppClick', {
+                source: 'redirect_page',
+                page_path: window.location.pathname,
+                lead_id: leadData.lead_id,
+                utm_campaign: leadData.utm_campaign || '',
+                ad_id: leadData.ad_id || ''
+            }, {
+                eventID: `${leadData.lead_id}-whatsapp`
+            });
+        }
 
         setTimeout(() => {
             window.location.href = whatsappUrl;
