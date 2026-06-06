@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Redirecionando para o WhatsApp | Fábio Augusto</title>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1015192737472352');
+        fbq('track', 'PageView');
+        fbq('track', 'Contact', {
+            content_name: 'whatsapp_redirect',
+            content_category: 'lead'
+        });
+        fbq('trackCustom', 'WhatsAppClick', {
+            source: 'redirect_page',
+            page_path: window.location.pathname
+        });
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1015192737472352&ev=Contact&noscript=1" />
+    </noscript>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #080810;
+            --text: #ffffff;
+            --muted: #d4a8ff;
+            --accent: #c840f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            text-align: center;
+        }
+
+        main {
+            width: min(100%, 520px);
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(28px, 6vw, 44px);
+            line-height: 1;
+        }
+
+        p {
+            margin: 0 auto 24px;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 999px;
+            background: var(--accent);
+            color: var(--text);
+            font-weight: 700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Redirecionando</h1>
+        <p>Estamos abrindo o WhatsApp para continuar sua conversa.</p>
+        <a id="whatsapp-link" href="https://wa.me/5585992300926" rel="noopener noreferrer">Abrir WhatsApp</a>
+    </main>
+
+    <script>
+        const fallbackText = 'Olá Fábio! Vim pelo seu site e quero um diagnóstico para meu consultório.';
+        const params = new URLSearchParams(window.location.search);
+        const message = params.get('text') || fallbackText;
+        const whatsappUrl = `https://wa.me/5585992300926?${new URLSearchParams({ text: message }).toString()}`;
+        const link = document.getElementById('whatsapp-link');
+        link.href = whatsappUrl;
+
+        setTimeout(() => {
+            window.location.href = whatsappUrl;
+        }, 900);
+    </script>
+</body>
+
+</html>
